@@ -1,6 +1,6 @@
 package com.fsm.estore.productservice.query.rest;
 
-import com.fsm.estore.productservice.query.FindProductsQuery;
+import com.fsm.estore.productservice.query.FindAllProductsQuery;
 import lombok.RequiredArgsConstructor;
 import org.axonframework.messaging.responsetypes.ResponseTypes;
 import org.axonframework.queryhandling.QueryGateway;
@@ -20,7 +20,7 @@ public class ProductQueryController {
     @GetMapping
     public List<ProductRestModel> getProducts() {
         return queryGateway.query(
-                new FindProductsQuery(),
+                new FindAllProductsQuery(),
                 ResponseTypes.multipleInstancesOf(ProductRestModel.class)
         ).join();
     }

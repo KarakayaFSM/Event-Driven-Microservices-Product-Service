@@ -1,5 +1,5 @@
 package com.fsm.estore.productservice.query;
 
-public class FindProductsQuery {
+public class FindAllProductsQuery {
 
 }

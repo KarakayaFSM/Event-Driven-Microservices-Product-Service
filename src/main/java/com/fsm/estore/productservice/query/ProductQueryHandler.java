@@ -16,8 +16,10 @@ public class ProductQueryHandler {
     private final ProductMapper mapper;
 
     @QueryHandler
-    public List<ProductRestModel> findProducts(FindProductsQuery query) {
-        return mapper.toProductRestModel(productRepository.findAll());
+    public List<ProductRestModel> findProducts(FindAllProductsQuery query) {
+        return mapper.toProductRestModel(
+                productRepository.findAll()
+        );
     }
 
 }
