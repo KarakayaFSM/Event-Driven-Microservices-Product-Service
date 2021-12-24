@@ -7,7 +7,8 @@ import java.util.List;
 
 @Mapper(componentModel = "spring")
 public interface ProductMapper {
+
     ProductRestModel toProductRestModel(Product product);
 
-    List<ProductRestModel> toProductRestModel(List<Product> products);
+    List<ProductRestModel> toProductRestModelCollection(List<Product> products);
 }
