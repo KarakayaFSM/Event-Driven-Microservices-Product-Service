@@ -1,6 +1,5 @@
 package com.fsm.estore.productservice.core.data;
 
-import com.fsm.estore.productservice.core.ProductRepository;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

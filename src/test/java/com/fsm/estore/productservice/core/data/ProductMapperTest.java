@@ -1,6 +1,5 @@
 package com.fsm.estore.productservice.core.data;
 
-import com.fsm.estore.productservice.core.Product;
 import com.fsm.estore.productservice.core.ProductMapperImpl;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;

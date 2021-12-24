@@ -1,5 +1,6 @@
 package com.fsm.estore.productservice.core;
 
+import com.fsm.estore.productservice.core.data.Product;
 import com.fsm.estore.productservice.query.rest.ProductRestModel;
 import org.mapstruct.Mapper;
 

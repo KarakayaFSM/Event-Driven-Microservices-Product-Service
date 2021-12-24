@@ -1,7 +1,7 @@
 package com.fsm.estore.productservice.query;
 
 import com.fsm.estore.productservice.core.ProductMapper;
-import com.fsm.estore.productservice.core.ProductRepository;
+import com.fsm.estore.productservice.core.data.ProductRepository;
 import com.fsm.estore.productservice.query.rest.ProductRestModel;
 import lombok.RequiredArgsConstructor;
 import org.axonframework.queryhandling.QueryHandler;

@@ -1,4 +1,4 @@
-package com.fsm.estore.productservice.core;
+package com.fsm.estore.productservice.core.data;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
