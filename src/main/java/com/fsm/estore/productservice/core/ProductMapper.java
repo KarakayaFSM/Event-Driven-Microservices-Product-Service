@@ -10,5 +10,5 @@ public interface ProductMapper {
 
     ProductRestModel toProductRestModel(Product product);
 
-    List<ProductRestModel> toProductRestModelCollection(List<Product> products);
+    List<ProductRestModel> toProductRestModel(List<Product> products);
 }
