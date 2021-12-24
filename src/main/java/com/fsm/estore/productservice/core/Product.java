@@ -1,9 +1,6 @@
 package com.fsm.estore.productservice.core;
 
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -17,7 +14,8 @@ import java.math.BigDecimal;
 @ToString
 @Entity
 @Table(name = "PRODUCT")
-@RequiredArgsConstructor
+@NoArgsConstructor
+@AllArgsConstructor
 public class Product implements Serializable {
 
     private static final long serialVersionUID = 8292132924446708196L;
