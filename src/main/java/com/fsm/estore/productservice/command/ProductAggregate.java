@@ -37,6 +37,11 @@ public class ProductAggregate {
 
     }
 
+    @CommandHandler
+    public void deleteProduct(DeleteProductCommand command) {
+
+    }
+
     @EventSourcingHandler
     public void on(ProductCreatedEvent event) {
         this.productId = event.getProductId();

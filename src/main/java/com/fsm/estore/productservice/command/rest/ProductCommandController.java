@@ -1,12 +1,10 @@
 package com.fsm.estore.productservice.command.rest;
 
 import com.fsm.estore.productservice.command.CreateProductCommand;
+import com.fsm.estore.productservice.command.DeleteProductCommand;
 import lombok.RequiredArgsConstructor;
 import org.axonframework.commandhandling.gateway.CommandGateway;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
 
@@ -33,7 +31,11 @@ public class ProductCommandController {
                 .build();
     }
 
-        return result;
+    @DeleteMapping("{productId}")
+    public String deleteProduct(@PathVariable String productId) {
+        return commandGateway.sendAndWait(
+                new DeleteProductCommand(productId)
+        );
     }
 
 }
