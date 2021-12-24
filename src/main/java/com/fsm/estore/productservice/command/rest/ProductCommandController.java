@@ -19,22 +19,19 @@ public class ProductCommandController {
 
     @PostMapping
     public String createProduct(@RequestBody CreateProductRestModel product) {
+            return commandGateway.sendAndWait(
+                    getCreateProductCommandFrom(product)
+            );
+    }
 
-        final var createProductCommand =
-                CreateProductCommand.builder()
-                        .productId(UUID.randomUUID().toString())
-                        .title(product.getTitle())
-                        .quantity(product.getQuantity())
-                        .price(product.getPrice())
-                        .build();
-
-        var result = "";
-
-        try {
-            result = commandGateway.sendAndWait(createProductCommand);
-        } catch (Exception e) {
-            result = e.getLocalizedMessage();
-        }
+    private CreateProductCommand getCreateProductCommandFrom(CreateProductRestModel product) {
+        return CreateProductCommand.builder()
+                .productId(UUID.randomUUID().toString())
+                .title(product.getTitle())
+                .quantity(product.getQuantity())
+                .price(product.getPrice())
+                .build();
+    }
 
         return result;
     }
